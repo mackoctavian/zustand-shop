@@ -1,5 +1,13 @@
-import Image from "next/image";
+"use client";
+
+import { useStore } from "@/store/store";
 
 export default function Home() {
-  return <div>hello</div>;
+  const { age } = useStore();
+
+  return (
+    <main>
+      <span>{age}</span>
+    </main>
+  );
 }
